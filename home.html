@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="flex justify-center">
+        <div class="mockup-phone bg-gray-200">
+            <div class="mockup-phone-display text-white grid place-content-center">
+                <!-- available balance -->
+                <div class="stats shadow">
+                    <div class="stat">
+                      <div class="stat-title font-bold text-2xl">Available Balance:</div>
+                      <div class="stat-value">8000</div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div>
+                    <button id="add-money-button" class="btn btn-primary">Add Money</button>
+                    <button id="cash-out-button"  class="btn btn-primary">Cash Out</button>
+                </div>
+                <div class="divider"></div>
+                <fieldset class="fieldset">
+                    <label class="fieldset-label">Add Amount</label>
+                    <input type="text" class="input text-gray-400" placeholder="Amount you want to add" />
+                    <label class="fieldset-label">Pin Number</label>
+                    <input type="password" class="input text-gray-400" autocomplete="off" placeholder="Enter your 4 digit pin" />
+                    <button class="btn btn-primary mt-4">Add Money</button>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+    <script src="js/home.js"></script>
+</body>
+</html>
