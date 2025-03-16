@@ -15,25 +15,36 @@
                 <div class="stats shadow">
                     <div class="stat">
                       <div class="stat-title font-bold text-2xl">Available Balance:</div>
-                      <div class="stat-value">8000</div>
+                      <div id="current-balance" class="stat-value">8000</div>
                     </div>
                 </div>
                 <div class="divider"></div>
-                <div>
-                    <button id="add-money-button" class="btn btn-primary">Add Money</button>
-                    <button id="cash-out-button"  class="btn btn-primary">Cash Out</button>
+                <div class="flex justify-between">
+                    <button id="show-add-money-button" class="btn btn-primary">Add Money</button>
+                    <button id="show-cash-out-button"  class="btn btn-primary">Cash Out</button>
                 </div>
                 <div class="divider"></div>
-                <fieldset class="fieldset">
+                <!-- ==== add money part begins here =======-->
+                <fieldset id="add-money-form" class="fieldset">
                     <label class="fieldset-label">Add Amount</label>
-                    <input type="text" class="input text-gray-400" placeholder="Amount you want to add" />
+                    <input type="text" id="input-amount" class="input text-gray-400" placeholder="Amount you want to add" />
                     <label class="fieldset-label">Pin Number</label>
-                    <input type="password" class="input text-gray-400" autocomplete="off" placeholder="Enter your 4 digit pin" />
-                    <button class="btn btn-primary mt-4">Add Money</button>
+                    <input type="password" id="input-pin-number" class="input text-gray-400" autocomplete="off" placeholder="Enter your 4 digit pin" />
+                    <button id="add-money-button" class="btn btn-primary mt-4">Add Money</button>
+                </fieldset>
+                <!-- ==== cashout part begins here =======-->
+                <fieldset id="cashout-form" class="hidden fieldset">
+                    <label class="fieldset-label">Cash out Amount</label>
+                    <input type="text" id="input-cashout-amount" class="input text-gray-400" placeholder="Amount you want to add" />
+                    <label class="fieldset-label">Pin Number</label>
+                    <input type="password" id="input-cashout-pin-number" class="input text-gray-400" autocomplete="off" placeholder="Enter your 4 digit pin" />
+                    <button id="cashout-button" class="btn btn-primary mt-4">Cash Out</button>
                 </fieldset>
             </div>
         </div>
     </div>
-    <script src="js/home.js"></script>
+    <script src="js/addAmount.js"></script>
+    <script src="js/cashout.js"></script>
+    <script src="js/swap.js"></script>
 </body>
 </html>
